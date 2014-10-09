@@ -16,7 +16,7 @@ Arbetsgång:
 - [ ] Readme-filen
      - Fyll i under rubrikerna nedan.
 - [ ] När projektet är färdigt gör en sista push till din användare.
-- [ ] Sista steget är att göra en pull-request till den här repo:n
+- [ ] Sista steget är att göra en pull-request till den här repo:n. Se till att göra den till din branch.
 
 
 ---
