@@ -5,18 +5,18 @@ Innehåller tomma filer till inlämningen. Huvudet i filerna är inte korrekta u
 
 Arbetsgång:
 
-- Gör en fork av denna repo till din github användare.
-- Skriv färdigt projektet (kom ihåg att göra en push ofta i fall det skulle hända något mwed koden).
-- Fyll i logfilen eftersom du skriver projektet
-- Log-filen skrivs enligt:
-    - Datum
-    - Vad skall jag göra idag.
-    - Vad är problemet?
-    - Till nästa gång
-- Readme-filen
-    - Fyll i under rubrikerna nedan.
-- När projektet är färdigt gör en sista push till din användare.
-- Sista steget är att göra en pull-request till den här repo:n
+- [ ] Gör en fork av denna repo till din github användare.
+- [ ] Skriv färdigt projektet (kom ihåg att göra en push ofta i fall det skulle hända något mwed koden).
+- [ ] Fyll i logfilen eftersom du skriver projektet
+    - Log-filen skrivs enligt:
+        - Datum
+        - Vad skall jag göra idag.
+        - Vad är problemet?
+        - Till nästa gång
+- [ ] Readme-filen
+     - Fyll i under rubrikerna nedan.
+- [ ] När projektet är färdigt gör en sista push till din användare.
+- [ ] Sista steget är att göra en pull-request till den här repo:n
 
 
 ---
