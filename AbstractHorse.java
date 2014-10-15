@@ -1,4 +1,4 @@
-public abstract AbstractClass{
+public abstract AbstractHorse{
 
 	static int nbrOfHorses;
 	private int startNbr;
