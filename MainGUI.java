@@ -14,7 +14,7 @@ import javax.swing.*;
     private JMenuBar menu;
     private JMenu archive, about;
     private JMenuItem terminate, copyright, help;
-     
+    private JLabel NbrOfHorses; 
      
      
      public MainGUI(){
@@ -24,8 +24,8 @@ import javax.swing.*;
 	 /*
 	  * Inställningar för JFramen
 	  */
-	 this.setTitle("Test");
-	 this.setSize(300,400);
+	 this.setTitle("Horse Race");
+	 this.setSize(1000,400);
 	 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	 
 	 /*
@@ -43,6 +43,7 @@ import javax.swing.*;
 	this.menu.add(archive);
 	this.menu.add(about);
 	this.archive.add(terminate);
+	
 	
 	this.about.add(copyright);
 	this.about.add(help);
@@ -68,10 +69,11 @@ import javax.swing.*;
 	    }
 	});
 	
-	 
-	 
+//	this.NbrOfHorses = new JLabel("Hur många hästar?");
+//	NbrOfHorses.setSize(300, 300);
+//        NbrOfHorses.setLocation(150, 150);
      }
-     
+ 
  public static void main(String[] args) {
       java.awt.EventQueue.invokeLater(new Runnable(){
          public void run(){
