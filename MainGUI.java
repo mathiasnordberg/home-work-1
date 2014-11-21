@@ -5,7 +5,7 @@ import javax.swing.*;
 
 /*
  * @ Mathias Nordberg
- * 2014
+ * 2014-11-21
  *
  */
  
@@ -85,13 +85,18 @@ import javax.swing.*;
 		JOptionPane.showMessageDialog(null, "Om programmet");
 	    }
 	});
-	
+	/*
+        Knapp för att starta ett race
+        */
         this.btn_start.addActionListener( new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){ 
                 race.runRace();
             }
         });
+        /*
+        Knapp för att skapa hästarna
+        */
         this.btn_create.addActionListener( new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
@@ -104,7 +109,9 @@ import javax.swing.*;
                 }
             }
         });
-        
+        /*
+        Knapp som ger NormalHorse ett litet försprång
+        */
         this.btn_handicap.addActionListener( new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){

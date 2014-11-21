@@ -3,12 +3,17 @@ import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.JOptionPane;
 import se.bjorknas.graphics.EventWindow;
-
+/*
+Här körs själva spelet.
+*/
 public class Game{
 private ArrayList <AbstractHorse> horses;
     public Game(){
         horses = new ArrayList<>();
     }
+    /*
+    Jämnför hästarna och ger NormalHorse ett litet försprång
+    */
     public void setHandicapHorses(){
         if(!horses.isEmpty()){
             
@@ -32,6 +37,9 @@ private ArrayList <AbstractHorse> horses;
             JOptionPane.showMessageDialog(null, msg + msg2); 
         }
     }
+    /*
+    Här skapas hästarna slumpmässigt.
+    */
     public void createHorses(int NbrOfHorses){
           
             for(int i = 0; i < NbrOfHorses; i++){
@@ -59,7 +67,9 @@ private ArrayList <AbstractHorse> horses;
         
     }
         
-
+    /*
+    Skapar en EventWindow frame och kör racet tills hästen går i mål.
+    */
     public void runRace(){
         if(!horses.isEmpty()){
         EventWindow win = new EventWindow(400, 200, "Race");
@@ -81,6 +91,9 @@ private ArrayList <AbstractHorse> horses;
         }
         
     }
+    /*
+    Kontrollerar om en häst gått i mål eller inte.
+    */
     private boolean raceOn(){
         boolean b = true;
             for(AbstractHorse h : horses){
