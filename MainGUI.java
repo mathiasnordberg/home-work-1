@@ -1,4 +1,5 @@
 
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -13,21 +14,27 @@ import javax.swing.*;
              
     private JMenuBar menu;
     private JMenu archive, about;
-    private JMenuItem terminate, copyright, help;
-    private JLabel NbrOfHorses; 
-     
-     
+    private JMenuItem terminate, copyright, help; 
+    private JPanel panel1;
+    private JLabel NbrOfHorses;
+    private JTextField txf_horses;
+    private JButton btn_start, btn_handicap, btn_create;
+    private Dimension dimBtn, dimTxf, dimLbl;
+    private Game race;        
      public MainGUI(){
-	 this.GUI();
+	 this.initMyGUI();
+         race = new Game();
+         
      }
-     public void GUI(){
+     private void initMyGUI(){
 	 /*
 	  * Inställningar för JFramen
 	  */
 	 this.setTitle("Horse Race");
 	 this.setSize(1000,400);
 	 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	 
+         this.panel1 = new JPanel();
+         this.add(panel1);
 	 /*
 	 * Skapar menyerna
 	 */
@@ -38,15 +45,26 @@ import javax.swing.*;
 	this.about = new JMenu("Om");	
 	this.copyright = new JMenuItem("Om programmet");
 	this.help = new JMenuItem("Hjälp");
-	
+	this.NbrOfHorses = new JLabel("Hur många hästar?");
+        this.btn_start = new JButton("Start");
+        this.btn_handicap = new JButton("Set handicaped horses");
+        this.btn_create = new JButton("Create horses");
+        this.txf_horses = new JTextField();
+        this.dimTxf = new Dimension(100, 25);
+        
+        this.txf_horses.setPreferredSize(dimTxf);
 	this.setJMenuBar(menu);
 	this.menu.add(archive);
 	this.menu.add(about);
 	this.archive.add(terminate);
-	
-	
 	this.about.add(copyright);
-	this.about.add(help);
+	this.about.add(help); 
+        
+        this.panel1.add(NbrOfHorses);
+        this.panel1.add(txf_horses);
+        this.panel1.add(btn_start);
+        this.panel1.add(btn_handicap);
+        this.panel1.add(btn_create);
 	
 	this.terminate.addActionListener( new ActionListener() {
 	@Override
@@ -69,9 +87,31 @@ import javax.swing.*;
 	    }
 	});
 	
-//	this.NbrOfHorses = new JLabel("Hur många hästar?");
-//	NbrOfHorses.setSize(300, 300);
-//        NbrOfHorses.setLocation(150, 150);
+        this.btn_start.addActionListener( new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){ 
+                race.runRace();
+            }
+        });
+        this.btn_create.addActionListener( new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+               
+               try{
+                   race.createHorses(Integer.parseInt(txf_horses.getText()));
+                }catch(NumberFormatException error){
+                    String msg = "Please enter a number in the Textfield\n";
+                    JOptionPane.showMessageDialog(null, msg); 
+                }
+            }
+        });
+        
+        this.btn_handicap.addActionListener( new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                race.setHandicapHorses();
+            }
+        });
      }
  
  public static void main(String[] args) {
