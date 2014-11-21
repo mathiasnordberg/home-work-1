@@ -42,13 +42,13 @@ private ArrayList <AbstractHorse> horses;
                         case 0:
                             
                             System.out.println("häst 1 skapad" + r);
-                            horses.add(new Subclass1(0 , 30*i, i+1));
+                            horses.add(new NormalHorse(0 , 30*i, i+1));
                             
                         break;
                         case 1: 
                             
                             System.out.println("häst 2 skapad" + r);
-                            horses.add(new Subclass2(0 , 30*i, i+1));
+                            horses.add(new FastHorse(0 , 30*i, i+1));
                             
                             
                         break;

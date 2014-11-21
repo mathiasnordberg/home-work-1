@@ -1,4 +1,3 @@
-
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,7 +18,7 @@ import javax.swing.*;
     private JLabel NbrOfHorses;
     private JTextField txf_horses;
     private JButton btn_start, btn_handicap, btn_create;
-    private Dimension dimBtn, dimTxf, dimLbl;
+    private Dimension dimTxf;
     private Game race;        
      public MainGUI(){
 	 this.initMyGUI();

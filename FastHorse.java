@@ -1,8 +1,8 @@
-public class Subclass2 extends AbstractHorse implements Comparable {
+public class FastHorse extends AbstractHorse implements Comparable {
 
     protected int x, y, startNbr, speed;
     
-    public Subclass2(int x, int y, int startNbr) {
+    public FastHorse(int x, int y, int startNbr) {
        
         this.startNbr = startNbr;
         this.x = x;
