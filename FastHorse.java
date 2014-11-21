@@ -35,9 +35,9 @@ public class FastHorse extends AbstractHorse implements Comparable {
     }
     
     /**
-     * Jämnför hastigheten mellan hästarna.
+     * Jämför hastigheten mellan hästarna.
      * @param other den andra hästen.
-     * @return returnerar 1 om hästen är snabbare än jämnförd häst, 0 om de är
+     * @return returnerar 1 om hästen är snabbare än jämförd häst, 0 om de är
      * lika snabba och -1 om den är söligare.
      */
     @Override

@@ -12,7 +12,7 @@ private ArrayList <AbstractHorse> horses;
         horses = new ArrayList<>();
     }
     /*
-    Jämnför hästarna och ger NormalHorse ett litet försprång
+    Jämför hästarna och ger NormalHorse ett litet försprång
     */
     public void setHandicapHorses(){
         if(!horses.isEmpty()){
